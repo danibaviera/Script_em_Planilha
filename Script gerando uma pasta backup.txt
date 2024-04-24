@@ -1,0 +1,25 @@
+--Script gerando uma pasta backup de arquivos existentes em pasta origem.
+
+function realizarBackup(){
+var pastaOrigem = DriveApp.getFolderById("aqui vai o url da pasta origem do drive");
+var pastaDestino = Drive.App.getFolderById("copia da url da pasta destino existente no drive");
+var date = newDate();
+var nomeBackup = "Backup_" + Utilities.formatDate(data, "GMT", "yyyy-mm-dd HH:mm:ss");
+var pastaCopia = pastaDestino.createFolder(nomeBackup);
+copiarConteudo(pastaOrigem, pastaCopia);
+
+function copiarConteudo(origem, destino) {
+var arquivos = origem.getFiles();
+while (arquivos.hasNext()){
+var arquivo = arquivos.next();
+arquivo.makeCopy(arquivo.getName(), destino);
+} 
+
+var subpasta = origem.getFolders();
+while (subPastas.hasNext()) {
+var subPasta = subpPastas.Next();
+var subPastaCopia = destino.createFolder(subPasta.getName());
+copiarConteudo (subPasta, subPastaCopia);
+		}
+	}
+}
