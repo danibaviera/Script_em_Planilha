@@ -3,7 +3,7 @@
 
 function enviarEmailsAntesDaData() {
   var planilha = SpreadsheetApp.getActiveSpreadsheet();
-  var aba = planilha.getSheetByName("lab");
+  var aba = planilha.getSheetByName("lab"); -- aqui vai o nome da aba da planilha 
   var dados = aba.getDataRange().getValues();
 
 
