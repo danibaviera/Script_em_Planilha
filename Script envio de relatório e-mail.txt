@@ -1,0 +1,16 @@
+Script envio de relatório para e-mail 
+
+function enviarRelatorioDiario() {
+  var destinatarios ="email@gmail.com"; // email que vai receber a informação
+  var assunto = "Assunto do e-mail";
+  var dataHoje = newDate();
+  var dataOntem = newDate (data atual);
+  dataOntem.setDate (dataHoje.getDate()-1);
+
+  var totalDeVendas = Math.floor(math.random()* 1000) + 1000;
+  var numeroPedidos = math.floor(math.random()*50) + 10;
+  var mensagem = "Relatório de Vendas " + Utilities.formatDate(dataOntem, "GMT", "dd/mm/yyyy") + ";\n\n"; // \n serve para quebrar linhas 
+
+  mensagem + = "Total de Vendas : $"  + totalDeVendas.toFixed(2) + "\n";
+  mensagem + = "Numero de Pedidos: " + numeroPedidos + "\n";
+  MailApp.sendEmail (destinatarios, assunto, mensagem);
