@@ -1,0 +1,7 @@
+Script calculando idade de uma planilha
+
+function calcAge () {
+var spreadSheet = SpreadSheetApp.openByid/ "aqui vai o id da planilha em uso o mesmo que a URL da planilha")
+var sheet = spreadSheet.getSheetByName ("nome da página da planilha");
+var dateofbirth = sheet.getRange("c2:c16").getValues();
+}
