@@ -1,0 +1,33 @@
+Script Calculo Idade forma melhorada 
+
+
+function calcAge(){
+ 
+//variável que define a planilha de trabalho
+var spreadsheet = SpreadsheetApp.openById("url_da_planilha");
+
+//variável que define a página de trabalho da planilha
+var sheet = spreadsheet.getSheetByName ("Nome  da página"); 
+
+//variável que armazena as datas de nascimento
+var dateofbirth = sheet.getRange ("C2:C16").getValues();
+
+//variável que define a range onde as idades serão gravadas
+var ages = sheet.getRange("D2:D16"):
+
+//variável que guarda a data atual 
+var today = new Date();
+
+for (var i = 0; 1 < dateofbirth.length; i++) {
+var dob = new Date (dateofbirth[i]);
+
+var age = today.getFullYear() - dob.getFullYear();
+
+if (today.getMonth() <dob.getMonth() || (today.getMonth() == dob.getMonth() && today.getDate() < dob.getDate()))
+age--;
+}
+
+ages.getCell(i+1,1).setValue(age); // +1,1 me garante que quero armazenar exatamente naquela posição.
+   }
+
+}
