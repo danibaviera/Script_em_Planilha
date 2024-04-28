@@ -1,0 +1,12 @@
+Quero retornar os dados de uma planilha, qual script usar?
+
+function myFunction() {
+  const ss = SpreadsheetApp. getActiveSpreadsheet();
+  const sheet = ss.getSheetByName('Projeto');
+  const values = sheet.getDataRange().getValues(); //pega os dados da planilha e getValues armazena os dados da planilha
+
+
+  for(var row = 0; row < values.length; row++){
+    console.log(values[row].join(' '));
+  }
+}
