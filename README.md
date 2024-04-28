@@ -1,5 +1,6 @@
-# scriptEmPlanilha
-Criando scripts  JS para automação em Planilhas sheet ou google docs
+# scriptEmPlanilha 
+
+Criando scripts  JS para automação em Planilhas sheet ou google docs com o APPSCRIPT do Google
 
 
 Explicando algumas Funções:
