@@ -1,3 +1,9 @@
+//Automatizar E-mail para manutenção de algo 
+//Planilha deve ter data de envio do e-mail e data do 
+//Vencimento do dia da manutenção do produto
+//USAR VIA PLANILHA E APPSCRIPT NO MENU SUPERIOR 
+
+
 function enviarEmailsAntesDaData() {
   var planilha = SpreadsheetApp.getActiveSpreadsheet();
   var aba = planilha.getSheetByName("lab");
